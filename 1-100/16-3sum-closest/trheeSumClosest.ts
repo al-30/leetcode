@@ -8,19 +8,20 @@ function threeSumClosest(nums: number[], target: number): number {
   }
 
   for (let i = 0; i < nums.length - 2; i++) {
-    let med = i + 1;
+    let mid = i + 1;
     let rigth = nums.length - 1;
 
-    while (med < rigth) {
-      let sum = nums[i] + nums[med] + nums[rigth];
-      if (Math.abs(sum - target) < Math.abs(result - target)) {
-        result = sum;
-      }
+    while (mid < rigth) {
+      const sum = nums[i] + nums[mid] + nums[rigth];
+      const currentDiff = Math.abs(sum - target);
+      const currentResult = Math.abs(result - target);
+
+      if (currentDiff < currentResult) result = sum;
 
       if (sum > target) {
         rigth--;
       } else {
-        med++;
+        mid++;
       }
     }
   }
