@@ -36,3 +36,4 @@ function uniqueOccurrences(arr: number[]): boolean {
   console.log(`nao repete`);
   return true;
 }
+

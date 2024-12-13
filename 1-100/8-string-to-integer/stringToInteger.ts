@@ -22,3 +22,4 @@ function myAtoi(s: string): number {
 
     return negative ? (-1) * Number(result) : Number(result)
 }
+

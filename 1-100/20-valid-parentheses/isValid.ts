@@ -22,3 +22,4 @@ function isValid(s: string): boolean {
   }
   return parentesesAbertos.length === 0;
 }
+
